@@ -1,0 +1,11 @@
+{
+  "name":"DataRetrievalAPI",
+  "version":"1.0.0",
+  "dependencies":{
+    "express": "4.14.0",
+    "sqlite3": "3.1.4"
+  },
+  "scripts":{
+    "start": "node pokemonStatsApp.js"
+  }
+}

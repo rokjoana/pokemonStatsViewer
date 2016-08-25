@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data Viz App</title>
+	<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.css"></link>
+	<link rel="stylesheet" type="text/css" href="js/nvd3/nv.d3.css"></link>
+
+	<script type="text/javascript" src="js/jquery/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/d3/d3.js"></script>
+	<script type="text/javascript" src="js/nvd3/nv.d3.js"></script>
+	<script type="text/javascript" src="js/lib/graphs.js"></script>
+	<!-- <script type="text/javascript" src="js/lib/donutCharts.js"></script> -->
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Pokemon Stats</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active">
+					<a href="#">Stats <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Search pokemons</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class="container">
+		<div class = "row">
+			<div class = "panel panel-default">
+				<div class="panel-heading">Total Stats Average per Type</div>
+				<div class="panel-body">
+					<svg id="chartAvgTotal" class="chart"></svg>
+				</div>
+			</div>
+		</div>
+		<div class = "row">
+			<div class="panel panel-default">
+				<div class="panel-heading">HP Average per Type</div>
+				<div class="panel-body">
+					<svg id="chartAvgHP" class="chart"></svg>
+				</div>
+			</div>
+		</div>
+		<div class = "row">
+			<div class="panel panel-default">
+				<div class="panel-heading">Speed Average per Type</div>
+				<div class="panel-body">
+					<svg id="chartAvgSpeed" class="chart"></svg>
+				</div>
+			</div>
+		</div>
+		<div class = "row">
+			<div class="panel panel-default">
+				<div class="panel-heading">Attack and Defense Average per Type</div>
+				<div class="panel-body">
+						<svg id="chartAvgAD" class="chart"></svg>
+				</div>
+			</div>
+		</div>
+		<div class = "row">
+			<div class="panel panel-default">
+				<div class="panel-heading">Special Attack and Defense Average per Type</div>
+				<div class="panel-body">
+					<svg id="chartAvgSpeAD" class="chart"></svg>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
