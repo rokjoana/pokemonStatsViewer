@@ -105,40 +105,11 @@ router.get('/stats/average',function(req,res){
       }
       res.json(jsonDatum);
     });
+  }else{
+    res.send();
   }
 });
 
-/**
-/**
-* GET method to return the average an attribute, for each type of pokemon.
-* query string: ?pokattribute=. If there is no query string returns an error.
 
-router.get('/pokemon/stats/averageAllTypes',function(req,res){
-	if(req.query.pokattribute !== undefined){
-		dataRetrieval.getAllTypes(function(data){
-			var attr = parseInt(req.query.pokattribute);
-			var resultJSON = [];
-			var i;
-			for(i=0; i<=data.length ;i++){
-				// calculate the average for that characteristic and that type
-				dataTools.averageAttr(attr, data[i], function(data2){
-					if(i === data.length){ // checks if is the last element
-						res.writeHead(200, {'Content-Type': 'text/plain'});
-						res.end(JSON.stringify(resultJSON));
-					}
-					var elem = {
-						'type': data[i],
-						'value': parseFloat(data2)
-					};
-					resultJSON.push(elem);
-				});
-			}
-		});
-	}else{
-		res.writeHead(500, {'Content-Type': 'text/plain'});
-		res.end("The attribute is invalid.");
-	}
-});
-**/
 
 module.exports = router;
